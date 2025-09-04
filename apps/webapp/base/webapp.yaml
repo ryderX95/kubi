@@ -1,0 +1,11 @@
+apiVersion: demo.example.com/v1
+kind: WebApp
+metadata:
+  name: myapp
+  namespace: demo
+spec:
+  image: webapp:0.1        # image already loaded into Minikube
+  replicas: 3
+  port: 8080
+  env:
+    APP_MESSAGE: "managed by gitops"
